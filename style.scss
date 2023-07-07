@@ -941,7 +941,8 @@ footer {
    }
 
    .connect {
-      width: 500px;
+      width: 100%;
+      flex-direction: column;
 
       .connect_data {
          text-align: center;
@@ -970,6 +971,10 @@ footer {
       div {
          width: 100%;
          flex-direction: column;
+
+         p {
+            width: 30ch;
+         }
       }
    }
 }
@@ -984,7 +989,7 @@ footer {
    }
 
    .dashboard {
-      width: 480px;
+      width: 380px;
    }
 
    .key_challenges {
@@ -1074,6 +1079,133 @@ footer {
 
       .key_challenges_body {
          width: 400px;
+      }
+   }
+}
+
+@media (max-width:450px) {
+   main {
+      .main_text {
+         h1 {
+            font-size: 2rem;
+            line-height: 2rem;
+         }
+
+         p {
+            width: 30ch;
+            font-size: 1rem;
+         }
+
+         button {
+            width: 250px;
+            font-weight: bold;
+         }
+      }
+   }
+
+   .dashboard {
+      margin-top: -100px;
+      width: 300px;
+
+      img {
+         width: 200px;
+      }
+   }
+
+   .key_challenges {
+      width: 300px;
+
+      h1 {
+         font-size: 2rem;
+         text-align: center;
+      }
+   }
+
+   .try_beau {
+      width: 280px;
+
+      .try_beau_data {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+
+         h1 {
+            font-size: 2rem;
+            text-align: center;
+         }
+
+         button {
+            width: 200px;
+         }
+      }
+   }
+
+   .try_beau_image {
+      display: none;
+   }
+
+   .usecase {
+      h1 {
+         font-size: 2rem;
+      }
+   }
+
+   .business {
+      width: 280px;
+
+      .business_data {
+         .business_data_header {
+            h1 {
+               font-size: 2rem;
+               width: 10ch;
+            }
+
+            p {
+               width: 20ch;
+            }
+         }
+
+         .business_data_table {
+            width: 250px;
+         }
+      }
+   }
+
+   .portal_interaction {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .portal_interaction_text_part {
+         width: 280px;
+
+         p {
+            font-size: .9rem;
+         }
+      }
+   }
+
+   .share_a_link {
+      width: 280px;
+      margin-top: 700px;
+
+      .share_a_link_text {
+         h1 {
+            font-size: 2rem;
+            width: 10ch;
+         }
+      }
+
+
+      .share_a_link_image {
+         display: none;
+      }
+   }
+
+   .key_challenges {
+      .key_challenges_body {
+         width: 250px;
       }
    }
 }
