@@ -36,7 +36,61 @@ header .header_links ul li {
 header .header_links ul li:hover {
   color: #5a5a5a;
 }
+header .hamburger {
+  display: none;
+  cursor: pointer;
+}
+header .hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #1e1e21;
+}
 
+@media (max-width: 1000px) {
+  header ul {
+    display: none;
+  }
+  header .hamburger {
+    display: block;
+  }
+  header .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  header .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  header .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  header .header_links {
+    position: fixed;
+    left: -100%;
+    gap: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  header .header_links.active {
+    left: 0;
+  }
+  header .header_links.active ul {
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+}
 main {
   display: flex;
   align-items: center;
@@ -630,9 +684,6 @@ footer ul li:hover {
   }
 }
 @media (max-width: 1000px) {
-  header ul {
-    display: none;
-  }
   main .main_image img {
     opacity: 0.5;
     margin-left: 900px;
