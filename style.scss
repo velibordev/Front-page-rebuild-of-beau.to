@@ -64,12 +64,15 @@ header {
 @media (max-width:1000px) {
 
    header {
+      background-color: white;
+
       ul {
          display: none;
       }
 
       .hamburger {
          display: block;
+         z-index: 9999;
       }
 
       .hamburger.active .bar:nth-child(2) {
@@ -86,22 +89,30 @@ header {
       }
 
       .header_links {
-         position: fixed;
+         position: absolute;
          left: -100%;
          gap: 0;
          display: flex;
          align-items: center;
-         flex-direction: column;
          justify-content: center;
          background-color: white;
          width: 100%;
          text-align: center;
          transition: .3s;
+         top: 80px;
+         flex-wrap: wrap;
+         height: 600px;
+         z-index: 9999;
 
+         ul {
+            display: flex;
+            flex-direction: column;
+         }
       }
 
       .header_links.active {
          left: 0;
+         z-index: 9999;
 
          ul {
             height: 600px;
@@ -111,11 +122,16 @@ header {
             align-items: center;
             justify-content: center;
             height: 100px;
+            z-index: 9999;
          }
       }
    }
 
-
+   main {
+      .main_text {
+         z-index: 10;
+      }
+   }
 }
 
 main {
@@ -1244,6 +1260,7 @@ footer {
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 300px;
 
       .portal_interaction_text_part {
          width: 280px;
